@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+ {% block title %} Payment Page {% endblock %}
+
+ 
+{% block content %}
+
+<h1>Payment | page</h1>
+ 
+<div class="grid grid-cols-3 gap-4 m-4">
+{% for  payment in payments  %}
+  
+        <div class="bg-blue-400 p-4 rounded">
+            <img src={{payment.image.url}} 
+            class="h-20 w-200"
+            alt="Image"/>
+            <h2 class="text-2xl m-2 text-black" >{{payment.name}}</h2>
+             <div class="flex justify-center">
+              <a href="{% url 'payment_detail' payment.id  %}" class="bg-orange-500 p-2 rounded mt-3 text-center">More info</a>
+             </div>
+        </div>
+
+{% endfor %}
+    </div>
+{% endblock %}

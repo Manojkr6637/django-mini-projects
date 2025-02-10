@@ -1,0 +1,12 @@
+{% extends "layout.html" %} {% block title %} Payment Detail Page {% endblock %}
+{% block content %}
+
+<h1>Payment Detail | page</h1>
+
+<div class="bg-blue-400 p-4 rounded">
+  <img src="{{payment.image.url}}" class="h-20 w-200" alt="Image" />
+  <h2 class="text-2xl m-2 text-black">{{payment.name}}</h2>
+
+  <p>{{payment.description}}</p>
+</div>
+{% endblock %}
